@@ -244,6 +244,12 @@ systemctl restart apache2
 # start the workers
 sudo -u www-data /var/www/MISP/app/Console/worker/start.sh
 
+# 12/ Optional: Shortcut to logs
+
+ln -s /var/www/MISP/app/tmp/logs /var/log/misp
+
+# 13/ Finished
+
 # Now log in using the webinterface:
 # The default user/pass = admin@admin.test/admin
 

@@ -1,5 +1,6 @@
-MISP INSTALLATION INSTRUCTIONS for Ubuntu 18.04-server
-------------------------- 
+MISP INSTALLATION INSTRUCTIONS Ubuntu 18.04-server
+--------------------------------------------------
+This document is taken from the original MISP repository, but it is adjusted to my needs.
 
 1/ Minimal Ubuntu install
 -------------------------
@@ -7,7 +8,7 @@ MISP INSTALLATION INSTRUCTIONS for Ubuntu 18.04-server
 # Install a minimal Ubuntu 16.04-server system with the software:
 - OpenSSH server
 
-# HINT: IPv6 must not be disabled for the redis server
+# HINT: IPv6 must not (!) be disabled for the redis server
 # become root, so you don't need all the sudos ;-)
 
 # Make sure your system is up2date:
@@ -17,24 +18,18 @@ sudo apt-get autoremove
 
 2/ Install LAMP & dependencies
 ------------------------------
-Once the system is installed you can perform the following steps:
 
 # Install the dependencies: (some might already be installed)
 sudo apt-get -y install curl gcc git gnupg-agent make python python3 openssl redis-server sudo rng-tools vim zip pv
 
-# Install MariaDB (a MySQL fork/alternative) and Apache 2.4
-sudo apt-get -y install mariadb-client mariadb-server apache2 apache2-doc apache2-utils
-
-# Install postfix mailserver
-sudo apt-get -y install postfix
-# sudo postconf -e 'relayhost = example.com'
-# sudo postfix reload
+# Install MariaDB (a MySQL fork/alternative), Apache 2.4 and the postfix mailserver
+sudo apt-get -y install mariadb-client mariadb-server apache2 apache2-doc apache2-utils postfix
 
 # Install PHP and dependencies
 sudo apt-get -y install libapache2-mod-php php php-cli php-gnupg php-dev php-json 
 sudo apt-get -y install php-mysql php-opcache php-readline php-redis php-xml php-mbstring
 
-# Secure the MariaDB installation (hint: set a strong root password and accept the standard values)
+# Secure the MariaDB installation (hint: accept the standard values)
 sudo mysql_secure_installation
 
 # Enable modules, settings, and default of SSL in Apache

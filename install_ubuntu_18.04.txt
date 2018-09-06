@@ -236,6 +236,16 @@ sed -i 's/memory_limit = 128M/memory_limit = 512M/' /etc/php/7.2/apache2/php.ini
 sed -i 's/upload_max_filesize = 2M/upload_max_filesize = 50M/' /etc/php/7.2/apache2/php.ini
 sed -i 's/post_max_size = 8M/post_max_size = 50M/' /etc/php/7.2/apache2/php.ini 
 
+Optional: Use Redis as PHP Session Store
+
+/etc/php/7.2/apache2/php.ini 
+Find the following lines and change them:
+# session.save_handler = files
+session.save_handler = redis
+session.save_path = "tcp://127.0.0.1:6379"
+
+
+
 # 11/ Start Workers and Restart
 
 # last restart for now

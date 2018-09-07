@@ -8,3 +8,4 @@
 cd /var/www/MISP
 git pull origin 2.4
 git submodule update --init --recursive
+pip3 install -U outdated

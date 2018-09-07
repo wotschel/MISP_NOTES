@@ -265,8 +265,9 @@ ln -s /var/www/MISP/app/tmp/logs /var/log/misp
 
 apt install libfuzzy-dev
 pip3 install git+https://github.com/kbandla/pydeep.git
-
 pip3 install python-magic
+pip3 install lief
+
 
 # 15/ Notes
 

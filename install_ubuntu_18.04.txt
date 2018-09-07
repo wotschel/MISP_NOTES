@@ -244,8 +244,6 @@ Find the following lines and change them:
 session.save_handler = redis
 session.save_path = "tcp://127.0.0.1:6379"
 
-
-
 # 11/ Start Workers and Restart
 
 # last restart for now
@@ -263,12 +261,14 @@ ln -s /var/www/MISP/app/tmp/logs /var/log/misp
 # Now log in using the webinterface:
 # The default user/pass = admin@admin.test/admin
 
-# 14/ Optional
+# 14/ Optional - Advanced Attachment Handler
 
 apt install libfuzzy-dev
 pip3 install git+https://github.com/kbandla/pydeep.git
 
 pip3 install python-magic
+
+# 15/ Notes
 
 # Using the server settings tool in the admin interface (Administration -> Server Settings), set MISP up to your preference
 # It is especially vital that no critical issues remain!

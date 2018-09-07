@@ -1,3 +1,8 @@
+# MISP can be updated from the webinterface.
+# Unfortunately some governmental agencies suggest proxy-servers in front of every tea can.
+# I had problems to update MISP from the webinterface (https://github.com/MISP/MISP/issues/1935)
+# But it is very easy to update MISP from the commandline
+
 # To update to the latest commit from commandline from the 2.4 branch simply pull the latest commit
 # You have to be root
 cd /var/www/MISP

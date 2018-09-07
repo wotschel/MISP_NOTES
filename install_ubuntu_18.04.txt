@@ -196,8 +196,8 @@ salt=$(python -c "import string, random; random = ''.join([random.choice(string.
 echo $salt
 #IMPORTANT: change it manually in /var/www/MISP/app/Config/config.php
 
-# Change base url in config.php
-/var/www/MISP/app/Console/cake Baseurl https://<your.FQDN.here>
+# Change base url in config.php (this seems outdated to me - ignore it for now)
+# /var/www/MISP/app/Console/cake Baseurl https://<your.FQDN.here>
 # alternatively, you can leave this field empty if you would like to use relative pathing in MISP
 
 # and make sure the file permissions are still OK

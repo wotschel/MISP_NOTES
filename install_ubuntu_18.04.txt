@@ -271,13 +271,13 @@ pip3 install lief
 
 # 15/ Notes
 
-# Using the server settings tool in the admin interface (Administration -> Server Settings), set MISP up to your preference
+# Using the server settings tool in the admin interface (Administration -> Server Settings & Maintenance), set MISP up to your preference
 # It is especially vital that no critical issues remain!
 # start the workers by navigating to the workers tab and clicking restart all workers
 
 # Don't forget to change the email, password and authentication key after installation.
 
-# Once done, have a look at the diagnostics
+# Once done, have a look at the Administration -> Server Maintenance & Settings -> Diagnostics
 
 # If any of the directories that MISP uses to store files is not writeable to the apache user, change the permissions
 # you can do this by running the following commands:

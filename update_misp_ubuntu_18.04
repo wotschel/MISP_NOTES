@@ -1,0 +1,5 @@
+# To update to the latest commit from commandline from the 2.4 branch simply pull the latest commit
+# You have to be root
+cd /var/www/MISP
+git pull origin 2.4
+git submodule update --init --recursive

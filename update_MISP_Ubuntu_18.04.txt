@@ -6,7 +6,10 @@
 
 # To update to the latest commit from commandline from the 2.4 branch simply pull the latest commit
 # You have to be root
-cd /var/www/MISP
+pth=/var/www/MISP
+cd $pth
 git pull origin 2.4
 git submodule update --init --recursive
 pip3 install -U outdated
+chown -R www-data:www-data $pth
+chmod -R 775 $pth

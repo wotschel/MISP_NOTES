@@ -5,7 +5,7 @@ This document is taken from the original MISP repository, but it is adjusted to 
 1/ Minimal Ubuntu install
 -------------------------
 
-# Install a minimal Ubuntu 16.04-server system with the software:
+# Install a minimal Ubuntu 18.04-server system with the software:
 - OpenSSH server
 
 # HINT: IPv6 must not (!) be disabled for the redis server
